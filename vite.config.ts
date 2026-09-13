@@ -16,6 +16,7 @@ const managedLinux = readExecutionProfile() === "managed-linux";
 const localBindingConfig = {
   name: process.env.CLOUDFLARE_WORKER_NAME || "lioncompany-sk",
   main: "vinext/server/fetch-handler",
+  compatibility_date: "2026-05-15",
   compatibility_flags: ["nodejs_compat"],
   d1_databases: d1
     ? [
