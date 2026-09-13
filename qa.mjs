@@ -1,0 +1,4 @@
+import { chromium } from 'file:///C:/Users/Admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+const browser=await chromium.launch({headless:true,channel:"msedge"});const page=await browser.newPage({viewport:{width:1440,height:1000}});await page.goto('http://localhost:5173/');await page.screenshot({path:'desktop.png',fullPage:true});console.log(await page.title());await page.getByRole('button',{name:'Nasledujúca ukážka'}).click();console.log('gallery',await page.getByRole('heading',{name:'Servis balkónových dverí'}).count());await page.setViewportSize({width:390,height:844});await page.screenshot({path:'mobile.png',fullPage:true});console.log('overflow',await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth));await browser.close();
+
+
