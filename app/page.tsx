@@ -1,5 +1,5 @@
 "use client";
-import {useState} from 'react';
+import BeforeAfter from './components/BeforeAfter';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ContactForm from './components/ContactForm';
@@ -9,10 +9,7 @@ const services=[
   ['03','Tieniaca technika','Príjemná teplota a súkromie. Navrhneme a namontujeme tienenie na mieru.','Vonkajšie a interiérové žalúzie|Rolety a elektrické motory|Smart Home ovládanie','/tieniaca-technika-bratislava'],
   ['04','Sieťky proti hmyzu','Čerstvý vzduch bez nezvaných návštevníkov. Riešenie pre okná aj dvere.','Pevné, rolovacie a plisované sieťky|Dverové sieťky na mieru|Montáž a výmena sieťoviny','/sietky-proti-hmyzu-bratislava'],
 ];
-const projects=[['window.jpg','Starostlivosť o okenné rámy','Detail okna počas servisných prác. Aj drobné komponenty rozhodujú o správnom fungovaní.'],['door.jpg','Servis balkónových dverí','Demontáž krídla a práca na kovaní balkónových dverí priamo u zákazníka.'],['hardware.jpg','Výmena komponentov kovania','Ukážka komponentov pri servisnom zásahu. Riešenie vyberáme podľa konkrétneho typu dverí.']];
 export default function Home(){
-  const[slide,S]=useState(0);
-  const p=projects[slide];
   return <>
     <Header/>
     <main>
@@ -38,14 +35,14 @@ export default function Home(){
       </section>
       <section className="work" id="praca">
         <div className="wrap">
-          <div className="heading"><div><span className="eyebrow">Z NAŠEJ PRAXE</span><h2>Práca, ktorú vidieť.<br/>Rozdiel, ktorý cítiť.</h2></div><p>Skutočné zábery zo servisných zásahov. Pozrite sa na detaily našej práce.</p></div>
-          <div className="project">
-            <div className="project-image"><img src={'/media/'+p[0]} alt={p[1]} loading="lazy"/><span>POČAS SERVISU</span></div>
-            <div className="project-copy">
-              <span className="eyebrow">SERVIS A MODERNIZÁCIA</span><h3>{p[1]}</h3><p>{p[2]}</p>
-              <a className="link" href="/realizacie">Ďalšie ukážky práce ↗</a>
-              <a className="more-photos" href="https://www.facebook.com/100064733659141/photos/" target="_blank" rel="noopener noreferrer">Ďalšie fotografie na Facebooku ↗</a>
-              <div className="controls"><span>0{slide+1}<small> / 03</small></span><div><button onClick={()=>S((slide+2)%3)} aria-label="Predchádzajúca ukážka">←</button><button onClick={()=>S((slide+1)%3)} aria-label="Nasledujúca ukážka">→</button></div></div>
+          <div className="heading"><div><span className="eyebrow">MALÁ OPRAVA. VIDITEĽNÝ ROZDIEL.</span><h2>Pred servisom.<br/><em>Po správnej starostlivosti.</em></h2></div><p>Posuňte deliacu čiaru a pozrite si ilustračnú ukážku výmeny opotrebovaného tesnenia.</p></div>
+          <div className="reveal-project">
+            <BeforeAfter/>
+            <div className="reveal-copy">
+              <span className="eyebrow">01 / VÝMENA TESNENIA</span><h3>Detail, ktorý mení<br/>pohodlie domova.</h3><p>Popraskané a uvoľnené tesnenie už nemusí správne doliehať. Nové tesnenie vybrané podľa typu okna pomáha obmedziť prefukovanie.</p>
+              <ul><li>Kontrola pôvodného tesnenia</li><li>Vyčistenie drážky a rámu</li><li>Výmena a kontrola dosadnutia</li></ul>
+              <a className="btn" href="#kontakt">Chcem servis okien <b>↗</b></a>
+              <a className="link" href="/realizacie">Skutočné fotografie našej práce ↗</a>
             </div>
           </div>
         </div>
