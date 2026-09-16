@@ -35,7 +35,7 @@ export default function Home(){
       </section>
       <section className="work" id="praca">
         <div className="wrap">
-          <div className="heading"><div><span className="eyebrow">MALÁ OPRAVA. VIDITEĽNÝ ROZDIEL.</span><h2>Pred servisom.<br/><em>Po správnej starostlivosti.</em></h2></div><p>Posuňte deliacu čiaru a pozrite si ilustračnú ukážku výmeny opotrebovaného tesnenia.</p></div>
+          <div className="heading"><div><span className="eyebrow">MALÁ OPRAVA. VIDITEĽNÝ ROZDIEL.</span><h2>Pred servisom.<br/><em>Po správnej starostlivosti.</em></h2></div><p>Posuňte deliacu čiaru a pozrite si ilustračné porovnania pred a po výmene tesnenia či balkónových dverí.</p></div>
           <div className="reveal-project">
             <BeforeAfter/>
             <div className="reveal-copy">
@@ -43,6 +43,14 @@ export default function Home(){
               <ul><li>Kontrola pôvodného tesnenia</li><li>Vyčistenie drážky a rámu</li><li>Výmena a kontrola dosadnutia</li></ul>
               <a className="btn" href="#kontakt">Chcem servis okien <b>↗</b></a>
               <a className="link" href="/realizacie">Skutočné fotografie našej práce ↗</a>
+            </div>
+          </div>
+          <div className="reveal-project balcony-comparison">
+            <BeforeAfter before="/media/balcony-door-before.webp" after="/media/balcony-door-after.webp" beforeAlt="Ilustrácia starých drevených balkónových dverí pri pohľade z interiéru" afterAlt="Ilustrácia nových bielych plastových balkónových dverí v rovnakom interiéri" label="Porovnať staré drevené a nové plastové balkónové dvere"/>
+            <div className="reveal-copy">
+              <span className="eyebrow">02 / BALKÓNOVÉ DVERE</span><h3>Rovnaký domov.<br/>Nový pohľad na balkón.</h3><p>Staré drevené dvere a ich moderná plastová alternatíva. Pozrite sa z interiéru na rozdiel v ráme, presklení a celkovom vzhľade.</p>
+              <ul><li>Čistý biely plastový profil</li><li>Presklenie po celej výške krídla</li><li>Nová kľučka a precízne detaily</li></ul>
+              <a className="btn" href="#kontakt">Poradiť sa o možnostiach <b>↗</b></a>
             </div>
           </div>
         </div>
