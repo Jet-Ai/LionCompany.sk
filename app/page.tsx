@@ -1,6 +1,7 @@
 "use client";
 import BeforeAfter from './components/BeforeAfter';
 import Header from './components/Header';
+import HeroSlideshow from './components/HeroSlideshow';
 import Footer from './components/Footer';
 import ContactForm from './components/ContactForm';
 const services=[
@@ -21,11 +22,7 @@ export default function Home(){
           <div className="actions"><a className="btn" href="#kontakt">Objednať servis <b>↗</b></a><a className="link" href="#kontakt">Získať bezplatnú cenovú ponuku →</a></div>
           <div className="trust">✓ Bezplatná obhliadka <span>✓ Cenová ponuka na mieste</span></div>
         </div>
-        <div className="hero-img">
-          <img src="/media/hero.jpg" alt="Detail servisu okenného kovania"/>
-          <div className="note"><span>↗</span><div><strong>Malá oprava. Veľký rozdiel.</strong><small>Predĺžte životnosť svojich okien.</small></div></div>
-          <div className="photo-label">LION / STAROSTLIVOSŤ O VÁŠ DOMOV</div>
-        </div>
+        <HeroSlideshow/>
       </section>
       <div className="benefits wrap"><span>Bezplatná obhliadka</span><span>Menej prievanu</span><span>Viac pohodlia</span><span>Dlhšia životnosť</span></div>
       <section className="section wrap" id="sluzby">
