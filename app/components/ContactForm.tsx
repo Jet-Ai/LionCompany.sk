@@ -1,7 +1,7 @@
 "use client";
 import {useState} from 'react';
-const services=['Servis okien a dverí','Výmena tesnení','Tieniaca technika','Sieťky proti hmyzu','Modernizácia a komponenty','Poradenstvo a iné služby'];
-export default function ContactForm({heading='Ozvite sa nám. My sa ozveme vám.'}:{heading?:string}){
+const services=['Bezplatná kontrola okien','Servis okien a dverí','Výmena tesnení','Tieniaca technika','Sieťky proti hmyzu','Modernizácia a komponenty','Poradenstvo a iné služby'];
+export default function ContactForm({heading='Ozvite sa nám. My sa ozveme vám.',initialService='Servis okien a dverí'}:{heading?:string;initialService?:string}){
   const[status,T]=useState('');
   const[busy,B]=useState(false);
   async function send(e:React.FormEvent<HTMLFormElement>){
@@ -28,7 +28,7 @@ export default function ContactForm({heading='Ozvite sa nám. My sa ozveme vám.
       <label>E-mail<input name="email" type="email" placeholder="vas@email.sk" autoComplete="email" required maxLength={200}/></label>
       <label>Obec / mesto<input name="location" autoComplete="address-level2" placeholder="Kde nás potrebujete?" required maxLength={100}/></label>
     </div>
-    <label>O akú službu máte záujem?<select name="service">{services.map(s=><option key={s}>{s}</option>)}</select></label>
+    <label>O akú službu máte záujem?<select name="service" defaultValue={initialService}>{services.map(s=><option key={s}>{s}</option>)}</select></label>
     <label>Čo potrebujete vyriešiť? <small>(nepovinné)</small><textarea name="message" placeholder="Napríklad: balkónové dvere sa ťažko zatvárajú…" rows={3} maxLength={2000}/></label>
     <p className="photo-hint">Problém je jednoduchšie posúdiť na fotke. Pokojne nám ju pošlite priamo na <a href="mailto:lion_company_info@proton.me">lion_company_info@proton.me</a> spolu s vaším menom.</p>
     <input className="honeypot" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true"/>

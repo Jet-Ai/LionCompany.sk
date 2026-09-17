@@ -25,6 +25,7 @@ export default function Home(){
         <HeroSlideshow/>
       </section>
       <div className="benefits wrap"><span>Bezplatná obhliadka</span><span>Menej prievanu</span><span>Viac pohodlia</span><span>Dlhšia životnosť</span></div>
+      <section className="wrap checkup-strip" aria-label="Bezplatná kontrola okien"><div><span className="eyebrow">PREVENCIA SA OPLATÍ</span><h2>Malý problém dnes.<br/>Zbytočná oprava zajtra?</h2><p>Pozrite si skutočné poškodenia a servisné zásahy. Stav tesnenia, kovania a nastavenia vašich okien skontrolujeme bezplatne.</p></div><div className="checkup-actions"><a className="btn" href="/realizacie#obhliadka">Objednať bezplatnú kontrolu ↗</a><a className="link" href="/realizacie">Pozrieť realizácie a videá →</a></div></section>
       <section className="section wrap" id="sluzby">
         <div className="heading"><div><span className="eyebrow">ČO PRE VÁS UROBÍME</span><h2>Jeden kontakt.<br/>Kompletná starostlivosť.</h2></div><p>Od zaseknutej kľučky po inteligentné tienenie. Postaráme sa o funkčnosť aj komfort vášho domova.</p></div>
         <div className="cards">{services.map(([n,t,d,l,href])=><article key={n}><span className="number">{n}<b>↗</b></span><h3>{t}</h3><p>{d}</p><ul>{l.split('|').map(x=><li key={x}>✓ {x}</li>)}</ul><a href={href}>Viac o tejto službe <span>↗</span></a></article>)}</div>
